@@ -18,6 +18,7 @@ $(document).ready(function() {
       $("#todo-list-item").val("");
     }
   });
+ 
 
   $(document).on("change", ".checkbox", function() {
     if ($(this).attr("checked")) {
@@ -41,3 +42,15 @@ $(document).ready(function() {
     localStorage.setItem("listItems", $("#list-items").html());
   });
 });
+
+function run(){
+var password = prompt("Password please");
+
+if(password != 'Linda'){
+document.body.innerHTML = '';
+document.body.innerHTML = 'Password Failed!';
+}else{
+alert('Success!');
+}
+}
+run();
